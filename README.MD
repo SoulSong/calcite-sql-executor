@@ -47,6 +47,10 @@ Load sample dynamoDb data with [AbstractDynamoDbTest](./src/test/java/com/shf/ca
 - [DynamoDbMapperTest](./src/test/java/com/shf/calcite/dynamodb/mapper/DynamoDbMapperTest.java)
 
 
+##  MultipleDatasource
+组合DynamoDb和CSV两个数据源的联合查询
+- [MultipleDatasourceTest](./src/test/java/com/shf/calcite/multiple/MultipleDatasourceTest.java)
+
 # Reference
 - https://github.com/apache/calcite
 ```text
