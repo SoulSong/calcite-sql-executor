@@ -1,0 +1,22 @@
+{
+  "version": "1.0",
+  "defaultSchema": "TEST",
+  "schemas": [
+    {
+      "name": "CSV_1",
+      "type": "custom",
+      "factory": "com.shf.calcite.csv.CsvSchemaFactory",
+      "operand": {
+        "dataFiles": "MUSIC.csv,ARTIST.csv"
+      }
+    },
+    {
+      "name": "CSV_2",
+      "type": "custom",
+      "factory": "com.shf.calcite.csv.CsvSchemaFactory",
+      "operand": {
+        "dataFiles": "ARTIST.csv"
+      }
+    }
+  ]
+}

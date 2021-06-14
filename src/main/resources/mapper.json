@@ -1,0 +1,18 @@
+{
+  "version": "1.0",
+  "defaultSchema": "TEST",
+  "schemas": [
+    {
+      "name": "DYNAMODB_MAPPER",
+      "type": "custom",
+      "factory": "com.shf.calcite.dynamodb.mapper.DynamoDbMapperSchemaFactory",
+      "operand": {
+        "packageNames": "com.shf.calcite.dynamodb.table.entity",
+        "accessKey": "access_key_id",
+        "secretKey": "secret_key_id",
+        "region": "us-east-1",
+        "endpoint": "http://127.0.0.1:8765"
+      }
+    }
+  ]
+}

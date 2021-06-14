@@ -1,0 +1,9 @@
+artist:VARCHAR,title:VARCHAR,album:VARCHAR,fyear:INTEGER
+lin junjie,caocao,曹操,2006
+lin junjie,jiangnan,江南,2004
+lin junjie,xijie,,2007
+lin junjie,xindiqiu,新地球,2014
+zhou jielun,jiangnan,范特西,2001
+zhou jielun,badukongjian,八度空间,2002
+zhou jielun,jingtanhao,惊叹号,2010
+zhou jielun,wohenmang,我很忙,2007
