@@ -30,7 +30,8 @@ ID:VARCHAR,NAME1:VARCHAR,NAME2:VARCHAR
 - 实体定义中表名、索引连接符采用`_`；
 - 通过`-`实现tableName-indexName的连接操作，其作为索引表的注册表名；
 - 目前仅支持所有query filter的AND连接语义操作；
-- 目前仅支持等值过滤，若需要添加其他类型，则需要更多判断，如hashKey仅支持等值；
+- 目前仅支持等值过滤，若需要添加其他类型，则需要更多判断，如dynamoDb中hashKey仅支持等值；
+- 当前支持的数据类型有限；
 
 
 # Test

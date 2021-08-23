@@ -84,9 +84,8 @@ public class TableModelScanner {
                 Map<String, Class<?>> fieldRefJavaType = Arrays.stream(declaredFields)
                         .collect(Collectors.toMap(declaredField -> declaredField.getName().toUpperCase(), Field::getType));
 
-
-                String realTableName = clazz.getAnnotation(DynamoDBTable.class).tableName();
-                String tableName = realTableName.toUpperCase();
+                String originTableName = clazz.getAnnotation(DynamoDBTable.class).tableName();
+                String tableName = originTableName.toUpperCase();
                 DynamoDBMapperTableModel<?> tableModel = mapper.getTableModel(clazz);
 
                 // 根据Entity构建所有字段的完整定义
@@ -123,7 +122,7 @@ public class TableModelScanner {
 
                 // 注册索引
                 try {
-                    TableDescription tableDescription = dynamoDb.getTable(realTableName).describe();
+                    TableDescription tableDescription = dynamoDb.getTable(originTableName).describe();
 
                     // 注册本地二级索引
                     List<LocalSecondaryIndexDescription> localSecondaryIndices = tableDescription.getLocalSecondaryIndexes();
@@ -143,7 +142,7 @@ public class TableModelScanner {
                         });
                     }
                 } catch (ResourceNotFoundException exception) {
-                    log.warn("table [{}] not found.", realTableName);
+                    log.warn("table [{}] not found.", originTableName);
                 }
 
 

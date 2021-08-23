@@ -14,6 +14,7 @@ import lombok.NoArgsConstructor;
  * 约束：
  * 实体中字段schema定义全部小写，便于与sql文对应匹配
  * 表名、索引连接符采用`_`
+ * attributeName需要与字段名完全匹配
  *
  * @author songhaifeng
  */
